@@ -13,6 +13,7 @@ extern "C" {
 #endif
 
 #include <stdint.h>
+#include <stdbool.h>
 
 typedef const char* Cronet_String;
 typedef void* Cronet_RawDataPtr;
