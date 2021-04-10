@@ -1,0 +1,7 @@
+crashpad_dependencies = "chromium"
+is_component_build = false
+is_debug = false
+rtc_include_ilbc = false
+v8_check_microtasks_scopes_consistency = false
+v8_enable_gdbjit = false
+v8_imminent_deprecation_warnings = false
