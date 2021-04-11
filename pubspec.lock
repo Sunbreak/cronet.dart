@@ -37,7 +37,7 @@ packages:
     source: hosted
     version: "1.15.0"
   ffi:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: ffi
       url: "https://pub.flutter-io.cn"
