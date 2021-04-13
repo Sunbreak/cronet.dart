@@ -145,20 +145,19 @@ gn args out/stable86_Release_Single_Cronet --list --short --overridesonly > stab
 
 #### iOS
 
+https://chromium.googlesource.com/chromium/src/+/master/components/cronet/build_instructions.md
+
 Default `target_cpu` is x64
 
 ```sh
 cd src
-gn args out/stable86_Release_Cronet
-# Add & save below lines
-#  is_debug = false
-#  is_component_build =false
+./components/cronet/tools/cr_cronet.py gn --out_dir=out/stable86_Release_Cronet
 ninja -C out/stable86_Release_Cronet cronet_package
 # out/stable86_Release_Cronet/cronet/Static/Cronet.framework
 gn args out/stable86_Release_Cronet --list --short --overridesonly > stable86_Release_Cronet.overrides.log
 ```
 
-> When `gn args out/stable86_Release_Cronet_arm64`, add `target_cpu = "arm64"`, to generate arm64 for **iphoneos** instead of **iphonesimulator**
+> After `./components/cronet/tools/cr_cronet.py gn --out_dir=out/stable86_Release_Cronet_arm64`, use `gn args out/stable86_Release_Cronet_arm64` to add `target_cpu = "arm64"`, to generate arm64 for **iphoneos** instead of **iphonesimulator**
 
 ### Linux
 
@@ -177,21 +176,20 @@ gn args out/stable86_Release_Single_Cronet --list --short --overridesonly > stab
 
 #### Android
 
+https://chromium.googlesource.com/chromium/src/+/master/components/cronet/build_instructions.md
+
 Default `target_cpu` is arm
 
 ```sh
 cd src
-gn args out/stable86_Release_Cronet
-# Add & save below lines
-#  is_debug = false
-#  is_component_build =false
+./components/cronet/tools/cr_cronet.py gn --out_dir=out/stable86_Release_Cronet
 ninja -C out/stable86_Release_Cronet cronet_package
 # out/stable86_Release_Cronet/cronet/libs/armabi-v7a/libcronet.86.0.4240.198.so
 gn args out/stable86_Release_Cronet --list --short --overridesonly > stable86_Release_Cronet.overrides.log
 ```
 
-> When `gn args out/stable86_Release_Cronet_arm64`, add `target_cpu = "arm64"`, to generate `out/stable86_Release_Cronet/cronet/libs/arm64-v8a/libcronet.86.0.4240.198.so`
+> After `./components/cronet/tools/cr_cronet.py gn --out_dir=out/stable86_Release_Cronet_arm64`, add `target_cpu = "arm64"`, to generate `out/stable86_Release_Cronet/cronet/libs/arm64-v8a/libcronet.86.0.4240.198.so`
 
-> When `gn args out/stable86_Release_Cronet_x86`, add `target_cpu = "x86"` and remove `arm_use_neon = false`, to generate `out/stable86_Release_Cronet/cronet/libs/x86/libcronet.86.0.4240.198.so`
+> After `./components/cronet/tools/cr_cronet.py gn --out_dir=out/stable86_Release_Cronet_x86`, add `target_cpu = "x86"` and remove `arm_use_neon = false`, to generate `out/stable86_Release_Cronet/cronet/libs/x86/libcronet.86.0.4240.198.so`
 
-> When `gn args out/stable86_Release_Cronet_x64`, add `target_cpu = "x64"` and remove `arm_use_neon = false`, to generate `out/stable86_Release_Cronet/cronet/libs/x86_64/libcronet.86.0.4240.198.so`
+> After `./components/cronet/tools/cr_cronet.py gn --out_dir=out/stable86_Release_Cronet_x64`, add `target_cpu = "x64"` and remove `arm_use_neon = false`, to generate `out/stable86_Release_Cronet/cronet/libs/x86_64/libcronet.86.0.4240.198.so`
