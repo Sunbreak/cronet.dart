@@ -143,6 +143,22 @@ ninja -C out/stable86_Release_Single_Cronet cronet_package
 gn args out/stable86_Release_Single_Cronet --list --short --overridesonly > stable86_Release_Single_Cronet.overrides.log
 ```
 
+**CAUTION**
+
+`id` may not be compatible with your detination application/library
+
+```sh
+$ otool -D libcronet.86.0.4240.198.dylib
+cronet/macos/libcronet.86.0.4240.198.dylib:
+@executable_path/libcronet.86.0.4240.198.dylib
+```
+
+Change `id` with install_name_tool
+
+```sh
+install_name_tool -id @rpath/libcronet.86.0.4240.198.dylib libcronet.86.0.4240.198.dylib
+```
+
 #### iOS
 
 https://chromium.googlesource.com/chromium/src/+/master/components/cronet/build_instructions.md
