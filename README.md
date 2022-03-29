@@ -58,7 +58,7 @@ https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instr
 
 ```sh
 mkdir chromium && cd chromium
-fetch --no-histroy --nohooks chromium
+fetch --no-history --nohooks chromium
 gclient runhooks # for the first time
 cd src && git fetch --tags
 git checkout -b stable86 86.0.4240.198
@@ -69,7 +69,7 @@ cd .. && gclient sync -D -f
 
 ```sh
 mkdir chromium && cd chromium
-fetch --no-histroy --nohooks chromium
+fetch --no-history --nohooks chromium
 gclient runhooks # for the first time
 cd src && git fetch --tags
 git checkout -b stable86 86.0.4240.198
@@ -80,7 +80,7 @@ cd .. && gclient sync -D -f
 
 ```sh
 mkdir chromium-ios && cd chromium-ios
-fetch --no-histroy --nohooks ios
+fetch --no-history --nohooks ios
 gclient runhooks # for the first time
 cd src && git fetch --tags
 git checkout -b stable86 86.0.4240.93
@@ -91,7 +91,7 @@ cd .. && gclient sync -D -f
 
 ```sh
 mkdir chromium && cd chromium
-fetch --no-histroy --nohooks chromium
+fetch --no-history --nohooks chromium
 cd src && ./build/install-build-deps.sh # for the first time
 gclient runhooks # for the first time
 cd src && git fetch --tags
@@ -103,7 +103,7 @@ cd .. && gclient sync -D -f
 
 ```sh
 mkdir chromium-android && cd chromium-android
-fetch --no-histroy --nohooks android
+fetch --no-history --nohooks android
 cd src && ./build/install-build-deps-android.sh # for the first time
 gclient runhooks # for the first time
 cd src && git fetch --tags
