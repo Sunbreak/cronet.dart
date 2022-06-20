@@ -60,7 +60,7 @@ https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instr
 mkdir chromium && cd chromium
 fetch --nohooks --no-history chromium
 gclient runhooks # for the first time
-cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+cd src && git fetch origin +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
 git checkout -b branch_86.0.4240.93
 cd .. && gclient sync -D -f --no-history
 ```
@@ -71,7 +71,7 @@ cd .. && gclient sync -D -f --no-history
 mkdir chromium && cd chromium
 fetch --nohooks --no-history chromium
 gclient runhooks # for the first time
-cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+cd src && git fetch origin +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
 git checkout -b branch_86.0.4240.93
 cd .. && gclient sync -D -f --no-history
 ```
@@ -82,7 +82,7 @@ cd .. && gclient sync -D -f --no-history
 mkdir chromium-ios && cd chromium-ios
 fetch --nohooks --no-history ios
 gclient runhooks # for the first time
-cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+cd src && git fetch origin +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
 git checkout -b branch_86.0.4240.93
 cd .. && gclient sync -D -f --no-history
 ```
@@ -94,7 +94,7 @@ mkdir chromium && cd chromium
 fetch --nohooks --no-history chromium
 cd src && ./build/install-build-deps.sh # for the first time
 gclient runhooks # for the first time
-cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+cd src && git fetch origin +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
 git checkout -b branch_86.0.4240.93
 cd .. && gclient sync -D -f --no-history
 ```
@@ -106,7 +106,7 @@ mkdir chromium-android && cd chromium-android
 fetch --nohooks --no-history android
 cd src && ./build/install-build-deps-android.sh # for the first time
 gclient runhooks # for the first time
-cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+cd src && git fetch origin +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
 git checkout -b branch_86.0.4240.93
 cd .. && gclient sync -D -f --no-history
 ```
