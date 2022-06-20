@@ -58,57 +58,57 @@ https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instr
 
 ```sh
 mkdir chromium && cd chromium
-fetch --no-history --nohooks chromium
+fetch --nohooks --no-history chromium
 gclient runhooks # for the first time
-cd src && git fetch --tags
-git checkout -b stable86 86.0.4240.198
-cd .. && gclient sync -D -f
+cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+git checkout -b branch_86.0.4240.93
+cd .. && gclient sync -D -f --no-history
 ```
 
 ### macOS
 
 ```sh
 mkdir chromium && cd chromium
-fetch --no-history --nohooks chromium
+fetch --nohooks --no-history chromium
 gclient runhooks # for the first time
-cd src && git fetch --tags
-git checkout -b stable86 86.0.4240.198
-cd .. && gclient sync -D -f
+cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+git checkout -b branch_86.0.4240.93
+cd .. && gclient sync -D -f --no-history
 ```
 
 #### iOS
 
 ```sh
 mkdir chromium-ios && cd chromium-ios
-fetch --no-history --nohooks ios
+fetch --nohooks --no-history ios
 gclient runhooks # for the first time
-cd src && git fetch --tags
-git checkout -b stable86 86.0.4240.93
-cd .. && gclient sync -D -f
+cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+git checkout -b branch_86.0.4240.93
+cd .. && gclient sync -D -f --no-history
 ```
 
 ### Linux
 
 ```sh
 mkdir chromium && cd chromium
-fetch --no-history --nohooks chromium
+fetch --nohooks --no-history chromium
 cd src && ./build/install-build-deps.sh # for the first time
 gclient runhooks # for the first time
-cd src && git fetch --tags
-git checkout -b stable86 86.0.4240.198
-cd .. && gclient sync -D -f
+cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+git checkout -b branch_86.0.4240.93
+cd .. && gclient sync -D -f --no-history
 ```
 
 #### Android 
 
 ```sh
 mkdir chromium-android && cd chromium-android
-fetch --no-history --nohooks android
+fetch --nohooks --no-history android
 cd src && ./build/install-build-deps-android.sh # for the first time
 gclient runhooks # for the first time
-cd src && git fetch --tags
-git checkout -b stable86 86.0.4240.198
-cd .. && gclient sync -D -f
+cd src && git fetch +refs/tags/86.0.4240.93:branch_86.0.4240.93 --depth 1
+git checkout -b branch_86.0.4240.93
+cd .. && gclient sync -D -f --no-history
 ```
 
 ## Setting up and build
